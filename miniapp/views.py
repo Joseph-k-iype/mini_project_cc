@@ -21,7 +21,7 @@ def index(request):
     #create a bucket and make it public
     s3.create_bucket(Bucket='cheque-data-2147220')
     #upload the image to the bucket
-    s3.Bucket('cheque-data-2147220').put_object(Key='cheque.png', Body=open('cheque.png', 'rb'))
+    s3.Bucket('cheque-data-2147220').put_object(Key='cheque.png', Body=open('images/cheque.png', 'rb'))
 
     # pass the image to texttract
     client = boto3.client('textract')
